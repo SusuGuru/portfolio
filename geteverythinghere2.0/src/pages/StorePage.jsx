@@ -101,9 +101,14 @@ export default function StorePage() {
       </div>
 
       {/* Footer */}
-      <footer className="store-footer">
-        <p>© 2025 GetEverythingHere. All rights reserved.</p>
-      </footer>
+<footer className="store-footer">
+  <p>© 2025 GetEverythingHere. All rights reserved.</p>
+  <div className="footer-right">
+    <a href="#">Privacy Policy</a>
+    <a href="#">Terms of Service</a>
+  </div>
+</footer>
+
     </div>
   );
 }

@@ -613,17 +613,33 @@ nav a:hover {
     text-align: center;
   }
 }
-/* ===== Footer ===== */
 .store-footer {
-  text-align: left;           /* Align text to the left */
-  padding: 20px 40px;         /* Add some breathing room */
-  background-color: #001f3f;  /* Keep navy blue theme */
+  background-color: #001533;   /* darker navy */
   color: white;
+  padding: 20px 40px;
+  margin-top: auto;
+  border-top: 1px solid #003366;
+  display: flex;
+  justify-content: space-between; /* space between left & right sections */
+  align-items: center;
   font-size: 0.9rem;
-  margin-top: 60px;           /* Leave extra space above for more placeholders */
 }
 
+.footer-right {
+  display: flex;
+  gap: 25px;                   /* spacing between links */
 }
+
+.footer-right a {
+  color: #9bc9ff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-right a:hover {
+  color: #ffffff;
+}
+
 /* Make the page take full height */
 .store-page {
   display: flex;
