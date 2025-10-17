@@ -42,6 +42,13 @@ const allProducts = [
     img: "https://lh3.googleusercontent.com/aida-public/AB6AXuAU-mjn1Q8OjfPvR4IMyExM60Izz7GcYMPZQI-x6uCIvOxt4FlHH0SFA6IWKsK_F3r0RKlOG-bKauCaKi3uXSaWXMYcgq8IxPSkCwsxtW-oFYD71x7buB4RUqJhSSSdy6wSa6XVZf3A6SSjGooZGp6iZ_xd8vw2sBN5_7AdxfwRqW5uopp5HwF9kSK-II0C-NYq99Pu-un-S_3X9zR9GF8FaqHeV3YWwQm5_n8Bxkigfckrej5CkF-poFaRsIq-hrKaWOICfYKDjJTC",
     available: true,
   },
+
+  // Extra placeholders for spacing and layout
+  { name: "Coming Soon", price: "—", status: "Upcoming", category: "All", img: "", available: false },
+  { name: "Coming Soon", price: "—", status: "Upcoming", category: "All", img: "", available: false },
+  { name: "Coming Soon", price: "—", status: "Upcoming", category: "All", img: "", available: false },
+  { name: "Coming Soon", price: "—", status: "Upcoming", category: "All", img: "", available: false },
+  { name: "Coming Soon", price: "—", status: "Upcoming", category: "All", img: "", available: false },
 ];
 
 export default function StorePage() {
@@ -71,9 +78,13 @@ export default function StorePage() {
       {/* Products Grid */}
       <div className="product-grid">
         {filteredProducts.map((p, i) => (
-          <div key={i} className="product-card">
+          <div key={i} className="product-card placeholder">
             <div className="image-container">
-              <img src={p.img} alt={p.name} />
+              {p.img ? (
+                <img src={p.img} alt={p.name} />
+              ) : (
+                <div className="placeholder-box">Image Coming Soon</div>
+              )}
             </div>
             <h3>{p.name}</h3>
             <div className="status">
@@ -88,6 +99,11 @@ export default function StorePage() {
           </div>
         ))}
       </div>
+
+      {/* Footer */}
+      <footer className="store-footer">
+        <p>© 2025 GetEverythingHere. All rights reserved.</p>
+      </footer>
     </div>
   );
 }

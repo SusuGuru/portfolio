@@ -1,54 +1,75 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
+import "../styles.css";
 
 export default function Navbar() {
-  return (
-    <header className="bg-slate-900 text-white sticky top-0 z-50 shadow-md">
-      <div className="container mx-auto flex items-center justify-between px-4 py-3">
-        {/* Logo */}
-        <div className="text-2xl font-bold">
-          <Link to="/">GetEverythingHere</Link>
-        </div>
+  const location = useLocation();
 
-        {/* Nav Links */}
-        <nav>
-          <ul className="flex items-center gap-6">
-            <li>
-              <Link to="/" className="hover:text-primary transition-colors">
-                Home
-              </Link>
-            </li>
-            <li>
-              <Link to="/store" className="hover:text-primary transition-colors">
-                Products
-              </Link>
-            </li>
-            <li>
-              <a href="#about-us" className="hover:text-primary transition-colors">
-                About
-              </a>
-            </li>
-            <li>
-              <a
-                href="mailto:sbrayka19@gmail.com"
-                className="hover:text-primary transition-colors"
-                onClick={(e) => {
-                  const isMobile = /iPhone|iPad|iPod|Android/i.test(
-                    navigator.userAgent
-                  );
-                  if (isMobile) {
-                    window.location.href =
-                      "https://wa.me/233547149360?text=Hello!%20I%20would%20like%20to%20inquire.";
-                    e.preventDefault();
-                  }
-                }}
-              >
-                Contact
-              </a>
-            </li>
-          </ul>
-        </nav>
+  const handleAboutClick = (e) => {
+    e.preventDefault();
+    if (location.pathname === "/") {
+      const aboutSection = document.getElementById("about");
+      if (aboutSection) {
+        aboutSection.scrollIntoView({ behavior: "smooth" });
+      }
+    } else {
+      window.location.href = "/#about";
+    }
+  };
+
+  const handleServicesClick = (e) => {
+    e.preventDefault();
+    if (location.pathname === "/") {
+      const servicesSection = document.getElementById("services");
+      if (servicesSection) {
+        servicesSection.scrollIntoView({ behavior: "smooth" });
+      }
+    } else {
+      window.location.href = "/#services";
+    }
+  };
+
+  const handleContactClick = (e) => {
+    e.preventDefault();
+    const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+    if (isMobile) {
+      // Opens WhatsApp on mobile
+      window.location.href =
+        "https://wa.me/233547149360?text=Hello!%20I%20would%20like%20to%20inquire.";
+    } else {
+      // Opens Gmail on desktop
+      window.location.href = "mailto:sbrayka19@gmail.com";
+    }
+  };
+
+  return (
+    <header className="navbar">
+      <div className="nav-logo">
+        <Link to="/">GetEverythingHere</Link>
       </div>
+
+      <nav>
+        <ul className="nav-links">
+          <li>
+            <Link to="/">Home</Link>
+          </li>
+          <li>
+            <a href="#services" onClick={handleServicesClick}>
+              Our Services
+            </a>
+          </li>
+          <li>
+            <a href="#about" onClick={handleAboutClick}>
+              About
+            </a>
+          </li>
+          <li>
+            <a href="mailto:sbrayka19@gmail.com" onClick={handleContactClick}>
+              Contact
+            </a>
+          </li>
+        </ul>
+      </nav>
     </header>
   );
 }
