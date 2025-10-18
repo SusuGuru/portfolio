@@ -7,7 +7,7 @@ import Navbar from "./components/Navbar";
 // Pages
 import LandingPage from "./pages/LandingPage";
 import StorePage from "./pages/StorePage";
-import Product from "./pages/Product";
+import ProductDetailsPage from "./pages/ProductDetail";
 
 // Styles
 import "./styles.css";
@@ -23,7 +23,7 @@ function App() {
         <Routes>
           <Route path="/" element={<LandingPage />} />
           <Route path="/store" element={<StorePage />} />
-          <Route path="/product/:id" element={<Product />} />
+          <Route path="/product/:productName" element={<ProductDetailsPage />} />
         </Routes>
       </div>
     </Router>

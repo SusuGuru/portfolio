@@ -55,7 +55,7 @@ export default function Navbar() {
           </li>
           <li>
             <a href="#services" onClick={handleServicesClick}>
-              Our Services
+              Services
             </a>
           </li>
           <li>

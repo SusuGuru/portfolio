@@ -19,7 +19,7 @@ export default function LandingPage() {
           />
           <img
             className="float f3"
-            src="https://lh3.googleusercontent.com/aida-public/AB6AXuAt_o1oHbYaEil-DE0Ip9lc6fI-8j3C5YlQI8J5szfmPOyVK1yU8yaCUNBOO43GR3Nw4XWarmLdhfnxjhuQcpH7dLKXniG71bwszMBPQYwnwjPxSZJzc_-tyYzR-SQ9Je7C_SxWS64O110bHeAna_FDrIzW4fnd36uoTFT6aeIgNgjMvs2-H7uDHbxg1nO00VtkoXobPNIxhF6mE37s9ypQxmPyF6sF2m_ZSrPeIaaJgVOcy8JjtjhY6-cR40YnlmRS3a9O_fR-ygaHF"
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuAt_o1oHbYaEil-DE0Ip9lc6fI-8j3C5YlQI8J5szfmPOyVK1yU8yaCUNBOO43GR3Nw4XWarmLdhfnxjhuQcpH7dLKXniG71bwszMBPQYwnwjPxSZJzc_-tyYzR-SQ9Je7C_SxWS64O110bHeAna_FDrIzW4fnd36uoTFT6aeIgNgjMvs2-H7uDHbxg1ZBorJS1OGiZb-K9SjkpYSx9SCvPBXRP1LjsS1oHRP88t0pW3sDJHUdA14ccMQ1tMnGvyLK2DmSPh5qZrReX"
             alt="floating gadget 3"
           />
           <img
@@ -105,7 +105,7 @@ export default function LandingPage() {
                 className="service-img"
                 style={{
                   backgroundImage:
-                    "url('https://lh3.googleusercontent.com/aida-public/AB6AXuAt_o1oHbYaEil-DE0Ip9lc6fI-8j3C5YlQI8J5szfmPOyVK1yU8yaCUNBOO43GR3Nw4XWarmLdhfnxjhuQcpH7dLKXniG71bwszMBPQYwnwjPxSZJzc_-tyYzR-SQ9Je7C_SxWS64O110bHeAna_FDrIzW4fnd36uoTFT6aeIgNgjMvs2-H7uDHbxg1nO00VtkoXobPNIxhF6mE37s9ypQxmPyF6sF2m_ZSrPeIaaJgVOcy8JjtjhY6-cR40YnlmRS3a9O_fR-ygaHF')",
+                    "url('https://lh3.googleusercontent.com/aida-public/AB6AXuAt_o1oHbYaEil-DE0Ip9lc6fI-8j3C5YlQI8J5szfmPOyVK1yU8yaCUNBOO43GR3Nw4XWarmLdhfnxjhuQcpH7dLKXniG71bwszMBPQYwnwjPxSZJzc_-tyYzR-SQ9Je7C_SxWS64O110bHeAna_FDrIzW4fnd36uoTFT6aeIgNgjMvs2-H7uDHbxg1ZBorJS1OGiZb-K9SjkpYSx9SCvPBXRP1LjsS1oHRP88t0pW3sDJHUdA14ccMQ1tMnGvyLK2DmSPh5qZrReX')",
                 }}
               ></div>
               <h4>Expert Tech Support</h4>
@@ -169,14 +169,14 @@ export default function LandingPage() {
             type="text"
             placeholder="Your Name"
             required
-            style={{ width: "320px", padding: "12px", borderRadius: "5px" }}
+            style={{ width: "700px", padding: "12px", borderRadius: "5px" }}
           />
           <textarea
             placeholder="Your Message"
             rows="4"
             required
             style={{
-              width: "320px",
+              width: "700px",
               padding: "12px",
               borderRadius: "5px",
               resize: "none",
