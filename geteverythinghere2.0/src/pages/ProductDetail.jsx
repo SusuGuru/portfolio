@@ -3,144 +3,96 @@ import { useParams, Link } from "react-router-dom";
 import { allProducts } from "../data/products";
 import "../styles.css";
 
-export default function ProductDetailsPage() {
+export default function ProductDetail() {
   const { productName } = useParams();
 
-  // Find the product from URL
+  // Find product by URL param
   const product = allProducts.find(
-    (p) => p.name.replace(/\s+/g, "-").toLowerCase() === productName.toLowerCase()
+    (p) =>
+      p.name.replace(/\s+/g, "-").toLowerCase() === productName.toLowerCase()
   );
 
+  // Prepare images safely (always run hook first)
+  const images =
+    product && product.images && product.images.length > 0
+      ? product.images
+      : product
+      ? [product.img]
+      : [];
+
+  const [mainImage, setMainImage] = useState(images[0] || "");
+
+  // Handle missing product
   if (!product) {
-    return (
-      <div className="p-8 text-white text-center text-lg">
-        Product not found!
-      </div>
-    );
+    return <p className="not-found">Product not found.</p>;
   }
 
-  // Handle images
-  const images = product.images || [product.img];
-  const [mainImage, setMainImage] = useState(images[0]);
-
   return (
-    <div className="min-h-screen font-display text-gray-200 bg-gradient-to-br from-[#0f172a] to-[#007bff] flex flex-col">
+    <div className="product-detail">
+      {/* LEFT SIDE - IMAGES */}
+      <div className="image-section">
+        <img src={mainImage} alt={product.name} className="main-image" />
+        <div className="thumbnail-container">
+          {images.map((img, index) => (
+            <img
+              key={index}
+              src={img}
+              alt={`${product.name} ${index + 1}`}
+              className={`thumbnail ${mainImage === img ? "active" : ""}`}
+              onClick={() => setMainImage(img)}
+            />
+          ))}
+        </div>
+      </div>
 
-      {/* Header */}
-      <header className="sticky top-0 z-50 backdrop-blur-sm bg-transparent border-b border-white/10 flex justify-between items-center p-4">
-        <Link to="/store" className="text-white font-bold text-lg">
+      {/* RIGHT SIDE - DETAILS */}
+      <div className="details-section">
+        <Link to="/store" className="back-link">
           ← Back to Store
         </Link>
-        <h2 className="text-white font-bold text-lg">{product.name}</h2>
-      </header>
+        <h2>{product.name}</h2>
+        <h3 className="price">GHS {product.price}</h3>
+        <p className="stock-status">✅ In Stock</p>
 
-      {/* Main Content */}
-      <main className="flex-grow container mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+        <h4>Specifications</h4>
+        <ul>
+          {(product.specifications || []).map((spec, index) => (
+            <li key={index}>{spec}</li>
+          ))}
+        </ul>
 
-          {/* Left Column: Images */}
-          <div>
-            {/* Main Image */}
-            <div className="w-full aspect-[4/3] rounded-lg overflow-hidden shadow-2xl shadow-blue-500/20">
-              <div
-                className="w-full h-full bg-center bg-cover transition-all duration-300"
-                style={{ backgroundImage: `url('${mainImage}')` }}
-              />
-            </div>
-
-            {/* Thumbnails */}
-            {images.length > 1 && (
-              <div className="grid grid-cols-4 gap-4 mt-4">
-                {images.map((img, i) => (
-                  <div
-                    key={i}
-                    className={`aspect-square rounded-md overflow-hidden cursor-pointer ring-2 transition-all duration-300 ${
-                      mainImage === img ? "ring-primary border-2 border-slate-900" : "ring-transparent"
-                    }`}
-                    onClick={() => setMainImage(img)}
-                  >
-                    <div
-                      className="w-full h-full bg-center bg-cover"
-                      style={{ backgroundImage: `url('${img}')` }}
-                    />
-                  </div>
-                ))}
-              </div>
-            )}
-          </div>
-
-          {/* Right Column: Product Info */}
-          <div className="flex flex-col gap-6 bg-slate-900/50 backdrop-blur-md rounded-lg p-8 ring-1 ring-white/10 shadow-2xl">
-
-            {/* Name, Price, Availability */}
-            <div>
-              <h1 className="text-4xl font-bold text-white">{product.name}</h1>
-              <span className="text-2xl font-bold text-primary mt-2 block">
-                {product.price}
-              </span>
-              <div className="flex items-center gap-2 mt-2">
-                <span
-                  className={`w-3 h-3 rounded-full ${
-                    product.available ? "bg-green-500" : "bg-red-500"
-                  }`}
-                />
-                <span className="text-sm font-medium text-gray-300">{product.status}</span>
-              </div>
-            </div>
-
-            {/* Specifications */}
-            <div className="border-t border-white/10 pt-6">
-              <h3 className="text-lg font-semibold text-white">Specifications</h3>
-              <ul className="mt-3 list-disc list-inside space-y-2 text-gray-300">
-                {product.specs.map((spec, i) => (
-                  <li key={i}>{spec}</li>
-                ))}
-              </ul>
-            </div>
-
-            {/* Color Options */}
-            {product.colors.length > 0 && (
-              <div className="border-t border-white/10 pt-6">
-                <h3 className="text-lg font-semibold text-white">Color Options</h3>
-                <div className="mt-3 flex items-center gap-3">
-                  {product.colors.map((color, i) => (
-                    <span
-                      key={i}
-                      className="w-8 h-8 rounded-full border-2 border-slate-600 cursor-pointer"
-                      style={{ backgroundColor: color }}
-                    />
-                  ))}
-                </div>
-              </div>
-            )}
-
-            {/* Storage Options */}
-            {product.storageOptions.length > 0 && (
-              <div className="border-t border-white/10 pt-6">
-                <h3 className="text-lg font-semibold text-white">Storage</h3>
-                <div className="mt-3 grid grid-cols-2 sm:grid-cols-4 gap-3 text-white">
-                  {product.storageOptions.map((storage, i) => (
-                    <div
-                      key={i}
-                      className="cursor-pointer text-center p-3 rounded-lg border border-slate-600 hover:bg-white/10"
-                    >
-                      {storage}
-                    </div>
-                  ))}
-                </div>
-              </div>
-            )}
-
-            {/* Contact Button */}
-            <div className="mt-6">
-              <button className="w-full sm:w-auto inline-flex items-center justify-center px-8 py-3 rounded-lg bg-primary text-white font-medium hover:bg-primary/90 shadow-lg transition-all duration-300">
-                Contact to Order
-              </button>
-            </div>
-
-          </div>
+        <h4>Color Options</h4>
+        <div className="color-options">
+          {(product.colors || []).map((color, index) => (
+            <span
+              key={index}
+              className="color-circle"
+              style={{ backgroundColor: color }}
+            ></span>
+          ))}
         </div>
-      </main>
+
+        <h4>Storage</h4>
+        <div className="storage-options">
+          {["128GB", "256GB", "512GB", "1TB"].map((size, index) => (
+            <button key={index} className="storage-btn">
+              {size}
+            </button>
+          ))}
+        </div>
+
+        <h4>Condition</h4>
+        <p>
+          <strong>Condition:</strong> Brand New
+        </p>
+        <p>
+          <strong>eSIM:</strong> Unlocked
+        </p>
+
+        <Link to="/contact" className="order-btn">
+          Contact to Order
+        </Link>
+      </div>
     </div>
   );
 }
