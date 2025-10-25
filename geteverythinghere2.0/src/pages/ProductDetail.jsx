@@ -15,29 +15,16 @@ export default function ProductDetail() {
   const [mainImage, setMainImage] = useState("");
   const [allImages, setAllImages] = useState([]);
 
-  // ✅ Black version URLs
-  const blackVersionURLs = {
-    "playstation-5": "https://share.google/images/jHOPwSswslskcu6AM",
-    "iphone-14-pro-max": "https://share.google/images/45kqB5sZIRZzuCVfi",
-    "airpods-pro":
-      "https://cdn.shopify.com/s/files/1/0384/6721/products/N856500019963_A_Logo_f7aff4bf-fc60-40a5-b953-a81040378173.jpg?v=1670966772",
-  };
-
-  const originalImages =
-    product && product.images && product.images.length > 0
-      ? product.images
-      : product
-      ? [product.img]
-      : [];
-
   useEffect(() => {
     if (product) {
-      const slug = product.name.replace(/\s+/g, "-").toLowerCase();
-      const blackURL = blackVersionURLs[slug];
+      const gallery = [product.img];
 
-      // ✅ Always keep both black + white in gallery
-      const gallery = [...originalImages];
-      if (blackURL && !gallery.includes(blackURL)) gallery.push(blackURL);
+      // Include all defined color images
+      if (product.colorImages) {
+        Object.values(product.colorImages).forEach((url) => {
+          if (url && !gallery.includes(url)) gallery.push(url);
+        });
+      }
 
       setAllImages(gallery);
 
@@ -50,20 +37,15 @@ export default function ProductDetail() {
   const handleColorSelect = (color) => {
     setSelectedColor(color);
 
-    const slug = product.name.replace(/\s+/g, "-").toLowerCase();
-    const blackURL = blackVersionURLs[slug];
-
-    if (color.toLowerCase() === "black" && blackURL) {
-      setMainImage(blackURL);
+    const colorURL = product.colorImages?.[color];
+    if (colorURL) {
+      setMainImage(colorURL);
     } else {
-      // ✅ White or other colors revert to the first image (not removing black)
-      setMainImage(originalImages[0]);
+      setMainImage(allImages[0]);
     }
   };
 
-  if (!product) {
-    return <p className="not-found">Product not found.</p>;
-  }
+  if (!product) return <p className="not-found">Product not found.</p>;
 
   return (
     <div className="product-detail">
@@ -77,7 +59,6 @@ export default function ProductDetail() {
           />
         </div>
 
-        {/* ✅ Thumbnails - always includes black + white */}
         <div className="thumbnail-container">
           {allImages.map((img, i) => (
             <img

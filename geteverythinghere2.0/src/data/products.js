@@ -16,7 +16,7 @@ export const allProducts = [
     colors: ["White", "Black"],
     colorImages: {
       White: "https://share.google/images/45kqB5sZIRZzuCVfi",
-      Black: "https://share.google/images/example-black-iphone14promax.jpg"
+      Black: "https://feeds.abplive.com/onecms/images/uploaded-images/2022/09/21/75d63dd0baf8b6b143200821380319a91663761592545402_original.jpg?impolicy=abp_cdn&imwidth=1200"
     },
     storageOptions: ["128GB", "256GB", "512GB", "1TB"],
     condition: "Brand New",
@@ -69,11 +69,11 @@ export const allProducts = [
     esIM: "N/A",
   },
   {
-    name: "PlayStation 5",
+    name: "PlayStation 5 Controller",
     price: "GHC 5,800",
     status: "Out of Stock",
     category: "Consoles",
-    img: "https://m.media-amazon.com/images/I/61I1eMbG5QL._SL1500_.jpg",
+    img: "https://lh3.googleusercontent.com/aida-public/AB6AXuA6GeMXExS-ZBgoSra7qnpXByOH2MMgk0V_2T2VbSBh0NUdtMgsFV_Vmqkw9CQfIJ6VBhw4ElS3tjse7dXrBcJXDdjru2w1BZKo34DYTn1BTlxLEc6L--AVScRXiNm2GOM4KACAHgJlzA9nUIzTHzCfEwIWMW-YJzH72sgGznBs4IN4n203kNj_Yin0GDa5VP49OjBPLJneiMJobnARC2tFPyy3SYXrsucTe29um5mFI8HyHZvFRZbr61Q84Jv2XTEeey-UxIV8mHQu",
     available: false,
     specs: [
       "Ultra HD 4K Gaming",
@@ -85,7 +85,7 @@ export const allProducts = [
     colors: ["White", "Black"],
     colorImages: {
       White: "https://m.media-amazon.com/images/I/61I1eMbG5QL._SL1500_.jpg",
-      Black: "https://share.google/images/jHOPwSswslskcu6AM"
+      Black: "https://m.media-amazon.com/images/I/61GNEp3auhL._AC_UF1000,1000_QL80_.jpg"
     },
     storageOptions: ["825GB"],
     condition: "Brand New",
@@ -108,7 +108,7 @@ export const allProducts = [
     colors: ["Silver", "Black"],
     colorImages: {
       Silver: "https://images.samsung.com/is/image/samsung/p6pim/africa-en/qe65qn95cakxxs/gallery/africa-en-qled-qn95c-qe65qn95cakxxs-535116288?$684_547_PNG$",
-      Black: "https://share.google/images/EDpMP2vGcAWcMmoQy"
+      Black: "https://i.dell.com/is/image/DellContent/content/dam/ss2/product-images/dell-client-products/notebooks/dell-premium/da16250/media-gallery/laptop-dell-da16250t-gy-gallery-2.psd?fmt=png-alpha&pscan=auto&scl=1&hei=804&wid=1015&qlt=100,1&resMode=sharp2&size=1015,804&chrss=full"
     },
     storageOptions: ["N/A"],
     condition: "Brand New",
@@ -153,7 +153,7 @@ export const allProducts = [
     ],
     colors: ["Black", "Silver"],
     colorImages: {
-      Black: "https://share.google/images/MzLLEInGWS8pIP8ng",
+      Black: "https://store.sony.co.nz/dw/image/v2/ABBC_PRD/on/demandware.static/-/Sites-sony-master-catalog/default/dw9c1dc226/images/WH1000XM5B/WH1000XM5B.png?sw=442&sh=442&sm=fit",
       Silver: "https://m.media-amazon.com/images/I/61N6O+N9muL._AC_SL1500_.jpg"
     },
     storageOptions: ["N/A"],
@@ -165,7 +165,7 @@ export const allProducts = [
     price: "GHC 5,800",
     status: "Available",
     category: "Consoles",
-    img: "https://share.google/images/hfJat4aQoLIs2knpb",
+    img: "https://lh3.googleusercontent.com/aida-public/AB6AXuCwmnnYX6i-4p5QkFyRrfQ53vJgPQwGQtFKXEcT24FWrkgsPqXFPzpZPw1cwU8JKcPhtRLf5n1rVbt5FpUxpWOOPFgR6_6SOSUlIPNHI4vkaIaoF4axYvTWuYiixRdbi7hSfLx3kQ_crdJCelvqaWRsykDfzOxcEilXYk72ECcGRGBuBr6Q5H5B5IYTi05_wd37YSW_2lJQ_Qf2kOHNuLtVRRKq9Mx7GlS-QBaVkAH67RWF85Ld_EP3HHyPZdg0mfa-2SI69kqRfrBC",
     available: true,
     specs: [
       "4K Ultra HD gaming",
@@ -176,18 +176,18 @@ export const allProducts = [
     ],
     colors: ["Black"],
     colorImages: {
-      Black: "https://share.google/images/hfJat4aQoLIs2knpb"
+      Black: "https://cdn11.bigcommerce.com/s-z5jig/images/stencil/1280x1280/products/7022/34113/XRN-410S__15188.1541609572.jpg?c=2"
     },
     storageOptions: ["1TB"],
     condition: "Brand New",
     esIM: "N/A",
   },
   {
-    name: "LG OLED TV",
+    name: "LG C2 OLED TV",
     price: "GHC 21,000",
     status: "Out of Stock",
     category: "TVs",
-    img: "https://share.google/images/GawoAlfv21nOR0utM",
+    img: "https://lh3.googleusercontent.com/aida-public/AB6AXuDjZGXGz14mprv5nmHkCnU-aA_ioH922eBBGJ2sLochkxAAGU2-FQV2tZ63xKtTkwGdo2mE1DLh3Uijs62FNVJXR-If21x6Rmqz-z07yquAPF6U23anz5FBJgnJDktgIGV7G1b8JiS390itbYeGWSvHAUTVXS2DeFsrrswCALFRS9Re1C0GD34mS12gBCDn2CZ7vm2A759_K-BG4ISHIHhbkgKbQLhjnrb7tbqyXYkScnw8sz0oRt2YL8MumfNdL79HBds1S8JnmJFu",
     available: false,
     specs: [
       "65-inch 4K OLED Display",
@@ -199,7 +199,7 @@ export const allProducts = [
     colors: ["White", "Black"],
     colorImages: {
       White: "https://share.google/images/GawoAlfv21nOR0utM",
-      Black: "https://share.google/images/1BU9S4qqpnYLUHCcj"
+      Black: "https://www.simosviolaris.cy/refiles/styles/product_waterm/public/products/458/image-458-oled65c26ld-763352050.jpg.webp?itok=4JKvfwfY"
     },
     storageOptions: ["N/A"],
     condition: "Brand New",
