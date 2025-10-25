@@ -13,7 +13,11 @@ export const allProducts = [
       "Cinematic mode in 4K Dolby Vision",
       "Up to 29 hours of video playback"
     ],
-    colors: ["Silver", "Space Black", "Gold", "Deep Purple"],
+    colors: ["White", "Black"],
+    colorImages: {
+      White: "https://share.google/images/45kqB5sZIRZzuCVfi",
+      Black: "https://share.google/images/example-black-iphone14promax.jpg"
+    },
     storageOptions: ["128GB", "256GB", "512GB", "1TB"],
     condition: "Brand New",
     esIM: "Unlocked",
@@ -33,6 +37,10 @@ export const allProducts = [
       "Up to 21 hours battery life"
     ],
     colors: ["Silver", "Space Gray"],
+    colorImages: {
+      Silver: "https://share.google/images/hqeMZqJW5g9W7jfRz",
+      "Space Gray": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/mbp16-spacegray-select-202110?wid=904&hei=840"
+    },
     storageOptions: ["512GB", "1TB", "2TB", "4TB"],
     condition: "Brand New",
     esIM: "N/A",
@@ -51,7 +59,11 @@ export const allProducts = [
       "Up to 4.5 hours listening time",
       "Sweat and water resistant"
     ],
-    colors: ["White"],
+    colors: ["White", "Black"],
+    colorImages: {
+      White: "https://share.google/images/P5s8GOuQRZuh0LNIk",
+      Black: "https://cdn.shopify.com/s/files/1/0384/6721/products/N856500019963_A_Logo_f7aff4bf-fc60-40a5-b953-a81040378173.jpg?v=1670966772"
+    },
     storageOptions: ["N/A"],
     condition: "Brand New",
     esIM: "N/A",
@@ -61,7 +73,7 @@ export const allProducts = [
     price: "GHC 5,800",
     status: "Out of Stock",
     category: "Consoles",
-    img: "https://lh3.googleusercontent.com/aida-public/AB6AXuA6GeMXExS-ZBgoSra7qnpXByOH2MMgk0V_2T2VbSBh0NUdtMgsFV_Vmqkw9CQfIJ6VBhw4ElS3tjse7dXrBcJXDdjru2w1BZKo34DYTn1BTlxLEc6L--AVScRXiNm2GOM4KACAHgJlzA9nUIzTHzCfEwIWMW-YJzH72sgGznBs4IN4n203kNj_Yin0GDa5VP49OjBPLJneiMJobnARC2tFPyy3SYXrsucTe29um5mFI8HyHZvFRZbr61Q84Jv2XTEeey-UxIV8mHQu",
+    img: "https://m.media-amazon.com/images/I/61I1eMbG5QL._SL1500_.jpg",
     available: false,
     specs: [
       "Ultra HD 4K Gaming",
@@ -71,6 +83,10 @@ export const allProducts = [
       "Backward compatibility with PS4 games"
     ],
     colors: ["White", "Black"],
+    colorImages: {
+      White: "https://m.media-amazon.com/images/I/61I1eMbG5QL._SL1500_.jpg",
+      Black: "https://share.google/images/jHOPwSswslskcu6AM"
+    },
     storageOptions: ["825GB"],
     condition: "Brand New",
     esIM: "N/A",
@@ -89,29 +105,14 @@ export const allProducts = [
       "Smart TV features",
       "Dolby Digital Plus sound"
     ],
-    colors: ["Black", "Silver"],
+    colors: ["Silver", "Black"],
+    colorImages: {
+      Silver: "https://images.samsung.com/is/image/samsung/p6pim/africa-en/qe65qn95cakxxs/gallery/africa-en-qled-qn95c-qe65qn95cakxxs-535116288?$684_547_PNG$",
+      Black: "https://share.google/images/EDpMP2vGcAWcMmoQy"
+    },
     storageOptions: ["N/A"],
     condition: "Brand New",
     esIM: "N/A",
-  },
-  {
-    name: "iPhone 13",
-    price: "GHC 9,500",
-    status: "Available",
-    category: "iPhones",
-    img: "https://lh3.googleusercontent.com/aida-public/AB6AXuD2XcUU4hNax6MBvtKjmUpTKV1V-I5fVUk0ZPFAwQfjzMNcxPDqdfxdRKHBHAKQe6mWHEzI9VtNsEK9t4krPVBc7YaaDeUi8HvvF8RCFOp2wtg_zoN0DpwXsl7H9MeKkUTrTz_NNT9zAhh1-PegcxS-lN3YYVic_81IbIEp4RxL4aTOWcZ3rO-B6HUqb70A65S7UAUX9as2A7W0tgw4scOJsRx0ymrR2qzBUB0pcI23zOQnFlS-73fOJQ6ByW_rpiW9iYoSCSh3y_aZ",
-    available: true,
-    specs: [
-      "6.1-inch Super Retina XDR display",
-      "A15 Bionic chip",
-      "12MP Dual camera system",
-      "Photographic Styles",
-      "Up to 19 hours video playback"
-    ],
-    colors: ["Red", "Blue", "Midnight", "Starlight", "Pink"],
-    storageOptions: ["128GB", "256GB", "512GB"],
-    condition: "Brand New",
-    esIM: "Unlocked",
   },
   {
     name: "Dell XPS 15",
@@ -128,6 +129,10 @@ export const allProducts = [
       "Up to 4TB SSD"
     ],
     colors: ["Silver", "Black"],
+    colorImages: {
+      Silver: "https://i.dell.com/sites/csimages/App-Merchandizing_Images/all/xps-15-9520-laptop-silver.jpg",
+      Black: "https://share.google/images/lXHzb8812D3vjx6Ax"
+    },
     storageOptions: ["512GB", "1TB", "2TB"],
     condition: "Brand New",
     esIM: "N/A",
@@ -147,6 +152,10 @@ export const allProducts = [
       "Lightweight and comfortable design"
     ],
     colors: ["Black", "Silver"],
+    colorImages: {
+      Black: "https://share.google/images/MzLLEInGWS8pIP8ng",
+      Silver: "https://m.media-amazon.com/images/I/61N6O+N9muL._AC_SL1500_.jpg"
+    },
     storageOptions: ["N/A"],
     condition: "Brand New",
     esIM: "N/A",
@@ -156,7 +165,7 @@ export const allProducts = [
     price: "GHC 5,800",
     status: "Available",
     category: "Consoles",
-    img: "https://lh3.googleusercontent.com/aida-public/AB6AXuCwmnnYX6i-4p5QkFyRrfQ53vJgPQwGQtFKXEcT24FWrkgsPqXFPzpZPw1cwU8JKcPhtRLf5n1rVbt5FpUxpWOOPFgR6_6SOSUlIPNHI4vkaIaoF4axYvTWuYiixRdbi7hSfLx3kQ_crdJCelvqaWRsykDfzOxcEilXYk72ECcGRGBuBr6Q5H5B5IYTi05_wd37YSW_2lJQ_Qf2kOHNuLtVRRKq9Mx7GlS-QBaVkAH67RWF85Ld_EP3HHyPZdg0mfa-2SI69kqRfrBC",
+    img: "https://share.google/images/hfJat4aQoLIs2knpb",
     available: true,
     specs: [
       "4K Ultra HD gaming",
@@ -166,6 +175,9 @@ export const allProducts = [
       "Quick Resume for multiple games"
     ],
     colors: ["Black"],
+    colorImages: {
+      Black: "https://share.google/images/hfJat4aQoLIs2knpb"
+    },
     storageOptions: ["1TB"],
     condition: "Brand New",
     esIM: "N/A",
@@ -175,18 +187,24 @@ export const allProducts = [
     price: "GHC 21,000",
     status: "Out of Stock",
     category: "TVs",
-    img: "https://lh3.googleusercontent.com/aida-public/AB6AXuDjZGXGz14mprv5nmHkCnU-aA_ioH922eBBGJ2sLochkxAAGU2-FQV2tZ63xKtTkwGdo2mE1DLh3Uijs62FNVJXR-If21x6Rmqz-z07yquAPF6U23anz5FBJgnJDktgIGV7G1b8JiS390itbYeGWSvHAUTVXS2DeFsrrswCALFRS9Re1C0GD34mS12gBCDn2CZ7vm2A759_K-BG4ISHIHhbkgKbQLhjnrb7tbqyXYkScnw8sz0oRt2YL8MumfNdL79HBds1S8JnmJFu",
+    img: "https://share.google/images/GawoAlfv21nOR0utM",
     available: false,
     specs: [
-      "65-inch 4K OLED display",
-      "Alpha 9 Gen 5 AI Processor",
-      "120Hz refresh rate",
-      "Dolby Vision IQ & Dolby Atmos",
-      "WebOS Smart TV"
+      "65-inch 4K OLED Display",
+      "α9 Gen5 AI Processor 4K",
+      "Dolby Vision IQ and Dolby Atmos",
+      "120Hz Refresh Rate",
+      "Smart TV with webOS"
     ],
-    colors: ["Black"],
+    colors: ["White", "Black"],
+    colorImages: {
+      White: "https://share.google/images/GawoAlfv21nOR0utM",
+      Black: "https://share.google/images/1BU9S4qqpnYLUHCcj"
+    },
     storageOptions: ["N/A"],
     condition: "Brand New",
     esIM: "N/A",
-  },
+  }
 ];
+
+export default allProducts;
