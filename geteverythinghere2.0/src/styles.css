@@ -937,7 +937,7 @@ html {
   color: white;
   padding: 50px;
   min-height: 100vh;
-  gap: 50px;
+  gap: 5px;
   font-family: "Poppins", sans-serif;
 }
 
@@ -946,14 +946,15 @@ html {
   flex: 1;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
 }
 
 .main-image {
   width: 100%;
-  max-width: 400px;
-  border-radius: 15px;
-  box-shadow: 0 5px 20px rgba(0,0,0,0.4);
+  max-width: 800px;
+  border-radius: 0px;
+  box-shadow: 0 0px 20px rgba(0,0,0,0.4);
+  object-fit: cover; /* ensures it fills without distortion */
 }
 
 .thumbnail-container {
@@ -965,7 +966,7 @@ html {
 .thumbnail {
   width: 80px;
   height: 80px;
-  border-radius: 10px;
+  border-radius: 0px;
   object-fit: cover;
   cursor: pointer;
   opacity: 0.7;
@@ -984,7 +985,7 @@ html {
 .details-section {
   flex: 1.2;
   background: rgba(255, 255, 255, 0.1);
-  border-radius: 20px;
+  border-radius: 10px;
   padding: 40px;
   box-shadow: 0 8px 25px rgba(0,0,0,0.3);
 }
@@ -1131,4 +1132,13 @@ html {
 
 .color-circle.selected {
   border: 2px solid #3b82f6;
+}
+.details-section {
+  flex: 1.2;
+  background: rgba(15, 23, 42, 0.6); /* closer to bg-slate-900/50 */
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 0px;
+  padding: 30px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
 }
